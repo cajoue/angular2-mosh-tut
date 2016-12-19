@@ -5,8 +5,14 @@ import {Component} from 'angular2/core'
   template: `
     <h2>Courses</h2>
     {{ title }}
-    `
+    <ul>
+      <li *ngFor = "#course of courses">
+        {{ course }}
+      </li>
+    </ul>
+    ` //the View
 })
 export class CoursesComponent {
   title = "The title of courses page";
+  courses = ["Course1", "Course2", "Course3"];
 }
